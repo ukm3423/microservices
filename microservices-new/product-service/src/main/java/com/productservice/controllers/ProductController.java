@@ -35,6 +35,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.productservice.config.FileUploadClient;
 import com.productservice.dto.ProductRequest;
 import com.productservice.dto.ProductResponse;
 import com.productservice.models.Product;
@@ -161,5 +162,13 @@ public class ProductController {
 
         return ResponseEntity.status(HttpStatus.OK).body(resp);
     }
+
+	// @GetMapping("/file/{fileName}")
+    // public ResponseEntity<?> downloadImage(@PathVariable String fileName) throws IOException{
+    //     // return productService.getImage(fileName);
+
+    //     // return ResponseEntity.status(HttpStatus.OK).contentType(MediaType.valueOf("image/jpg")).body(imageData);
+    // }
+
 
 }

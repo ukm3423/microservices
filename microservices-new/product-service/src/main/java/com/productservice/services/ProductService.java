@@ -8,8 +8,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import com.productservice.config.FileUploadClient;
 import com.productservice.dto.ProductRequest;
 import com.productservice.dto.ProductResponse;
 import com.productservice.models.Category;
@@ -31,6 +33,9 @@ public class ProductService {
 
 	@Autowired
 	private FileStorageService fileStorageService;
+
+	// @Autowired
+	// private FileUploadClient fileClient;
 
 	public Product addProduct(ProductRequest req) throws IOException {
 
@@ -103,6 +108,10 @@ public class ProductService {
 			return false;
 		}
 	}
+
+    // public ResponseEntity<?> getImage(String fileName) {
+    //     return fileClient.downloadImage(fileName);
+    // }
 
 
 }
