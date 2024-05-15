@@ -20,6 +20,8 @@
         <module>product-service</module>
         <module>order-service</module>
         <module>inventory-service</module>
+        <module>filestorage-service</module>
+        <module>filestorage-service</module>
     </modules>
 
     <properties>
